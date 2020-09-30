@@ -55,7 +55,7 @@ jobs:
   downstream:
     source:
       repository: https://github.com/aspnet/benchmarks.git
-      branchOrCommit: halter73/https-proxy
+      branchOrCommit: halter73/https-proxy-test
       project: src/Downstream/Downstream.csproj
     readyStateText: Application started.
     variables:
