@@ -92,7 +92,7 @@ steps:
               - ${{ if and(eq(serverScheme.displayName, downstreamScheme.displayName), eq(serverHttpProtocol.displayName, downstreamHttpProtocol.displayName), or(eq(serverScheme.displayName, 'https'), eq(serverHttpProtocol.displayName, 'HTTP/1.1'))) }}:
                 - task: PublishToAzureServiceBus@1
                   condition: succeededOrFailed()
-                  displayName: ${{ s.displayName }} ${{ payload.displayName }} ${{ serverScheme.displayName }} ${{ serverHttpProtocols.displayName }}
+                  displayName: ${{ s.displayName }} ${{ payload.displayName }} ${{ serverScheme.displayName }} ${{ serverHttpProtocol.displayName }}
                   inputs:
                     connectedServiceName: ${{ parameters.connection }}
                     waitForCompletion: true
